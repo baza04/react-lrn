@@ -1,0 +1,24 @@
+Promise -> get func(resolve, reject)
+
+resolve will do if promise has successfuly done
+reject oposite
+
+if we return our promise ->
+-> result will send to then func (if successful)
+-> if not result send to catch
+
+.then -> return promise
+
+
+.catch -> 
+
+Promise.all([...promises...]) get arr of promises as parameter
+wait to end of all recieved promises
+
+Promise.race([]) -> arr of prom to parameter
+wait end of the first promise
+
+React.lazy -> imoport part of code only when it component will used
+    - this feature used when we have very big code
+
+    
