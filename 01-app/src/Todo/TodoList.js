@@ -10,14 +10,16 @@ const styles = {
   },
 };
 
-function TodoList(props) {
+function TodoList(props) { // props
   return (
     <ul style={styles.ul}>
       { props.todos.map((todo, index) => (
+      // { todos.map((todo, index) => (
         <TodoItem
           todo={todo}
-          key={todo.id}
+          key={todo.id} // why use key?!
           index={index}
+          // onChange={onChange}
           onChange={props.onToggle}
         />
       ))}

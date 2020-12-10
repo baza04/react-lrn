@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Context from '../context'
 
@@ -27,13 +27,13 @@ function TodoItem({ todo, index, onChange }) {
   }
 
   return (
-    <li style={styles.li}>
+    <li style={styles.li} >
       <span className={classes.join(' ')}>
         <input
           type="checkbox"
           checked={todo.completed}
           style={styles.input}
-          onChange={() => onChange(todo.id)}
+          onChange={(e) => onChange(todo.id)}
         />
         <strong> {index + 1} </strong>
         &nbsp;

@@ -26,7 +26,7 @@ function App() {
   // create state again
   const [loading, setLoading] = React.useState(true) 
 
-  
+
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/todos?_limit=5')
       .then(response => response.json())
@@ -34,6 +34,7 @@ function App() {
       setLoading(false)
   }, [])
 
+  // change completed field in object by setTodos func
   function toggleTodo(id) {
     setTodos( 
       todos.map((todo) => {

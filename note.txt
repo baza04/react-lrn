@@ -22,3 +22,88 @@ React.lazy -> imoport part of code only when it component will used
     - this feature used when we have very big code
 
     
+=====================================================
+
+- index.html 
+    have div with class "root"
+
+- index.js
+    will run from all app
+    import React, ReactDOM, index.css, App (component)
+    render App component in DOM element "root"
+
+
+** Components
+    function name() {
+        return <div className='some className' /> // if we have some empty div
+         or
+        return (
+            <div className=''> 
+
+            </div>
+        )
+
+    }
+
+
+** LifeCycle of Component
+    init:
+        constructor(props)
+        componentWiilMount()
+        render()
+        componentDidMount() 
+        // if we want to do something with DOM of component
+        // we do it after componentDidMount
+    updating:
+        componentWillRecieveProps(nextProps) // only if parents was update
+        shouldComponentUpdate(nextProps, nextState) // call if any setState
+        componentWillUpdate(nextProps, nextState) // call if any setState
+        render()
+        componentDidUpdate(prevProps, prevState)
+
+    delete:
+        componentWillUnmount()
+
+class Example extends React.Component {
+    // first method -> initialization
+    constructor(props) {
+        super(props);
+        this.state = {date: new Date()};
+    }
+
+    componentDidMount() {
+        do something (maybe initialization) after this component was
+        reandered in DOM tree
+    }
+
+    componentWillUnmount() {
+        use to clear all inits after this component was used
+        memory duck protection
+    }
+
+}
+
+
+==========================================================================
+                            React Hooks
+==========================================================================
+
+    - useState -> to create some variable in component and store data
+            return arr with [value, setValue] 
+
+    - useEffect -> to realize lifecycle in functional programming
+            recieve two params:
+                - callback
+                - list of dependencies (ARRAY)
+            
+        if useEffect get empty arr as deps list it will emulate componentDidMount
+        
+    - useContext -> to change main stage in the App.js from other components
+
+
+    - useReducer -> 
+
+
+==========================================================================
+
+
