@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+  min-width: 1024px;
+  display: flex;
+  justify-content: center;
+}
+
+.BooksTable {
+  background-color: #2A2F37;
+  min-height: 80vh;
+  min-width: 800px;
+}
+
+.BookItem {
+  margin: 20px;
+  border: 2px solid white;
+}
